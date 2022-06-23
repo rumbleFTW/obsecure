@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "Global-Censorship",
+    "description": "Image and text censorship for NSFW/ 18+ contents for all websites",
+    "browser_action":
+    {
+        "default_icon": "./assets/icon.png",
+        "default_popup": "./scripts/popup.html"
+    },
+    "permissions": [],
+    "version": 0.1,
+    "content_scripts":[
+        {
+            "matches": ["http://*/*", "https://*/*"],
+            "js": ["./scripts/contentScript.js"]
+        }
+    ]
+}
