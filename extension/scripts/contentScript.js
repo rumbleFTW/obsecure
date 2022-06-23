@@ -1,1 +1,1 @@
-window.alert('Hello guys')
+console.log("Extension has started")
