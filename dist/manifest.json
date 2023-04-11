@@ -1,0 +1,44 @@
+{
+    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApAR3gTAUuMUf/nAaIip/Vd2xMAR2Xk+9dqlVruWUdsMXeCGiuECchTmOguyPakqdTTA7Mbyd0RyaU86z63iX350cdyYXzfhLUwecQYIZUFh15c7HhGm8YliGj26voZAkczPB8EnaQtnhUIvTkdrys2/TtQy46bCmZlOTuAwM+xQXf0Yo0GkKCU/+bI/S/e7ZkYD+39Riwj/w/Xv+ipdfAH6clPJ/Xs+cOm+MsydKuR7bB3PermsHiv2LKbEnyS7wn7Vev5Q2pdGRRcMQDnXZwYP5YlrEQEp2xdwM2kIvCh2MOk7J0ULniFUpPpdk7Uy2jD72pCZxT4SiiuAUdMLogQIDAQAB",
+    "name": "ObSecure",
+    "version": "0.1.0",
+    "description": "Block and report obscene content directly from your browser",
+    "host_permissions": [
+      "<all_urls>"
+    ],
+    "background": {
+      "service_worker": "./src/service_worker.js"
+    },
+    "content_security_policy": {
+      "extension_pages": "script-src 'self'; object-src 'self'"
+    },
+    "content_scripts": [
+      {
+        "matches": ["http://*/*", "https://*/*"],
+        "js": ["./src/content.js"],
+        "all_frames": true,
+        "run_at": "document_start"
+      }],
+    "manifest_version": 3,
+    "action": {
+      "default_popup": "./src/popup.html",
+      "default_icon": {
+        "16": "images/icon16x16.png",
+        "32": "images/icon32x32.png",
+        "48": "images/icon48x48.png",
+        "128": "images/icon128x128.png"
+      }
+    },
+    "icons": {
+      "16": "images/icon16x16.png",
+      "32": "images/icon32x32.png",
+      "48": "images/icon48x48.png",
+     "128": "images/icon128x128.png"
+    },
+    "permissions": [
+      "contextMenus",
+      "tabs",
+      "nativeMessaging",
+      "activeTab"
+    ]
+  }
