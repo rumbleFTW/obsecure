@@ -1,5 +1,8 @@
 import os
 import tensorflow as tf
+import warnings
+
+warnings.filterwarnings("ignore")
 
 import json
 from flask_cors import CORS
@@ -42,6 +45,7 @@ def predict():
 
 
 if __name__ == "__main__":
-    MODEL = tf.keras.models.load_model("../models/image/dump/mobile_net.h5")
+    MODEL_PATH = os.path.abspath("./models/image/dump/mobile_net.h5")
+    MODEL = tf.keras.models.load_model(MODEL_PATH)
     CLASSES = ["control", "gore", "pornography"]
     app.run(threaded=True, debug=True)
