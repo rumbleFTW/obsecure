@@ -16,7 +16,7 @@ Given the government's stance on pornography, it is likely that they would be in
 
 #### **Architecture**
 
-![](./media/arch.jpg)
+![](./media/arch.png)
 
 #### **Use cases**
 
