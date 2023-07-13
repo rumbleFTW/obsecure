@@ -16,7 +16,8 @@ Given the government's stance on pornography, it is likely that they would be in
 
 #### **Architecture**
 
-![](./media/arch.png)
+![arch](https://github.com/rumbleFTW/obsecure/assets/85807431/0207d16c-04a1-44ed-bfc6-0c4f7bac210e)
+
 
 #### **Use cases**
 
@@ -61,12 +62,14 @@ python ./app.py
 
 To install the unpacked extension in chrome, follow the instructions here. Briefly, navigate to `chrome://extensions`, make sure that the Developer mode switch is turned on in the upper right, and click Load Unpacked. Then select the appropriate directory (the dist directory containing manifest.json);
 
-![](./media/installing.png)
+![installing](https://github.com/rumbleFTW/obsecure/assets/85807431/827a8656-a7ed-47f8-99c7-72405718887e)
+
 
 If it worked you should see an icon for the ObSecure Chrome extension.
 
 4. Using the extension: Once the extension is installed, you should be able to censor websited in the browser. To do so, navigate to a site with images on it. Clock on the `extension` button and select `ObSecure`. Then click on the `Start` button. Clicking that should cause the extension to execute the model on the image, and then add some filter and label over the image indicating the prediction.
 
-![](./media/using.png)
+![using](https://github.com/rumbleFTW/obsecure/assets/85807431/535a6caa-0916-4386-934a-e1c1dfecb9f7)
+
 
 5. Removing the extension: To remove the extension, click `Remove` on the extension page, or use the `Remove from Chrome...` menu option when right clicking the icon.
